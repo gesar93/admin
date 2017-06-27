@@ -212,7 +212,7 @@ class ModelRepository implements ModelRepositoryInterface
 				]);
 				if ($this->isDateColumn($type))
 				{
-					if(env('DB_CONNECTION') == 'sqlsrv') $field = DB::raw('convert(' . $field . ' using utf8)');
+					if(env('DB_CONNECTION') != 'sqlsrv') $field = DB::raw('convert(' . $field . ' using utf8)');
 				}
 				$query->orWhere($field, 'like', $search);
 			}
