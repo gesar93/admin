@@ -70,7 +70,7 @@ abstract class SleepingOwlModel extends \Eloquent implements ValidationModelInte
 			$value = Carbon::createFromTimestamp($value);
 			return $value->format($format);
 		}
-		return $result;
+		return $result; 
 	}
 
 
