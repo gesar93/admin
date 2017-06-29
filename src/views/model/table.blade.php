@@ -4,9 +4,9 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<h1 class="page-header">
-				{{{ $title }}}
+				{{ $title }}
 				@if(isset($subtitle))
-					({{{ $subtitle }}})
+					({{ $subtitle }})
 				@endif
 			</h1>
 			@if(Session::has('message'))
@@ -19,7 +19,7 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-12">
-			<a class="btn btn-primary navbar-btn" {{ $modelItem->isCreatable() ? '' : 'disabled' }} href="{{{ $newEntryRoute }}}"><i class="fa fa-plus"></i> {{{ Lang::get('admin::lang.table.new-entry') }}}</a>
+			<a class="btn btn-primary navbar-btn" {{ $modelItem->isCreatable() ? '' : 'disabled' }} href="{{ $newEntryRoute }}"><i class="fa fa-plus"></i> {{ Lang::get('admin::lang.table.new-entry') }}</a>
 			<div class="table-responsive">
 				<table class="table table-striped table-hover" id="dataTable" {!! $modelItem->renderTableAttributes() !!}>
 					<thead>

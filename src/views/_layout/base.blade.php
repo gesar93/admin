@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{{ $pageTitle }}}</title>
+	<title>{{ $pageTitle }}</title>
 
 	@foreach (\SleepingOwl\Admin\AssetManager\AssetManager::styles() as $style)
 		<link media="all" type="text/css" rel="stylesheet" href="{{ $style }}" >
